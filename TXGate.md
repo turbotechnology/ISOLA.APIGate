@@ -17,9 +17,9 @@
   Время жизни сессии зависит от настроек сервера и обычно составляет
   несколько минут (с момента последнего обращения).
 
-  curl -X POST http://localhost:83/txgate/auth/login \
-      -H 'Content-Type: application/json' \
-      -d '{"user": "login", "password": "pass"}'
+    curl -X POST http://localhost:83/txgate/auth/login \
+        -H 'Content-Type: application/json' \
+        -d '{"user": "login", "password": "pass"}'
 
 
 ## Вызов методов API
@@ -41,10 +41,10 @@
   В случае если сессия просрочена, запрос возвращает 401 Unauthorized
   В таком случае необходимо получить новый ключ и повторить запрос уже с ним.
 
-  curl -X POST http://localhost:83/txgate/turbo9/Сис2.СтроковыеФункции.СБольшойБуквы \
-      -H 'Callback: https://turbotechnology.ru/gptest/at.php' \
-      -H 'SessionID: 9956E8310A78CD533704412D' \
-      -d тест
+    curl -X POST http://localhost:83/txgate/turbo9/Сис2.СтроковыеФункции.СБольшойБуквы \
+        -H 'Callback: https://turbotechnology.ru/gptest/at.php' \
+        -H 'SessionID: 9956E8310A78CD533704412D' \
+        -d тест
 
   Если первый символ переданный строки маленькая буква, то данная функция заменит её на большую.
   Т.е. в примере вернётся строка "Тест".
@@ -59,26 +59,26 @@
   В случае успеха запрос возвращает 200 OK
   Результат работы возвращается в формате Content-Type: application/json; charset=utf-8
   Пример:
-  {"event": {
-      "eventID": 123,
-      "modifyDate": "21.12.2012 12:34:56",
-      "request": "Сис2.СтроковыеФункции.СБольшойБуквы",
-      "data": "тест",
-      "priority": 0,
-      "status": 10,
-      "owner": "Dispatcher",
-      "callback": ""
+    {"event": {
+        "eventID": 123,
+        "modifyDate": "21.12.2012 12:34:56",
+        "request": "Сис2.СтроковыеФункции.СБольшойБуквы",
+        "data": "тест",
+        "priority": 0,
+        "status": 10,
+        "owner": "Dispatcher",
+        "callback": ""
+      }
     }
-  }
 
   В случае если сессия просрочена, запрос возвращает 401 Unauthorized
   В таком случае необходимо получить новый ключ и повторить запрос уже с ним.
 
-  curl http://localhost:83/txgate/event/status/7 \
-      -H 'SessionID: 9956E8310A78CD533704412D'
+    curl http://localhost:83/txgate/event/status/7 \
+        -H 'SessionID: 9956E8310A78CD533704412D'
 
 
 ## Ping
   Для проверки работоспособности сервера используется GET-запрос
 
-  curl http://localhost:83/txgate/ping
+    curl http://localhost:83/txgate/ping
