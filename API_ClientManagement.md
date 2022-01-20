@@ -1,5 +1,5 @@
-# API: УРМОКС
-API УРМОКС это набор функций Т9 . Вызов этих функций производится через метод ProcCall объекта [TBSession](https://paper.dropbox.com/doc/-9-PHP-5bhqG0R3hQUQG32UBarsR). В описании предполагается, что объект уже создан и соединение с Т9 установлено, т.е. успешно выполнен код:
+# API: управления услугами
+Вызов методов API производится через метод ProcCall объекта [TBSession](https://github.com/turbotechnology/ISOLA.APIGate/blob/main/%D0%9F%D0%BE%D0%B4%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BA_%D0%A29_%D0%B8%D0%B7_PHP.md). В описании предполагается, что объект уже создан и соединение с Т9 установлено, т.е. успешно выполнен код:
 
     $t9 = new TBSession;
     $t9->ProcConnect($ProcServer, $ProcServer, $InfobaseName, $user, $pass, $role);
