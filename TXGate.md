@@ -50,7 +50,7 @@
   Т.е. в примере вернётся строка "Тест".
   
   ***Перечень методов API***
-  - [API регистрации клиентов и управления услугами](https://github.com/turbotechnology/ISOLA.APIGate/blob/main/API_ClientManagement.md)
+  - [API управления услугами(договорами обслуживания)](https://github.com/turbotechnology/ISOLA.APIGate/blob/main/API_ClientManagement.md)
   - [API получения состояния счетов (портфелей)](https://github.com/turbotechnology/ISOLA.APIGate/blob/main/API_PortfolioState.md)
   - [API операционных документов]
 
